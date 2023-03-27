@@ -84,6 +84,17 @@ for z in range(0, 10):
 # ...
 # 14
 # FizzBuzz
+for i in range(0, 100):
+	if i == 0:
+		print(i)
+	elif i % 3 == 0 and i % 5 == 0:
+		print("FizzBuzz")
+	elif i % 3 == 0:
+		print("Fizz")
+	elif i % 5 == 0:
+		print("Buzz")
+	else:
+		print(i)
 
 # Übung 2
 # Schreibe eine Schleife die dir alle Zahlen von 1 bis 200 zur Verfügung stellt
@@ -91,11 +102,28 @@ for z in range(0, 10):
 # Zahl + Endung 'st', 'nd', 'rd' oder 'th'
 # 1st, 2nd, 3rd, 4th, ..., 21st, 22nd, 23rd, 24th
 # Bonus: Berücksichtige alle Zahlen die mit 11, 12 oder 13 enden
+for i in range(1, 200):
+	if i % 100 == 11 or i % 100 == 12 or i % 100 == 13:
+		print(f"{i}: {i}th")
+	elif i % 10 == 1:
+		print(f"{i}: {i}st")
+	elif i % 10 == 2:
+		print(f"{i}: {i}nd")
+	elif i % 10 == 3:
+		print(f"{i}: {i}rd")
+	else:
+		print(f"{i}: {i}th")
 
 # Übung 1:
 # Stoppuhr
 # Bevor die Minute hochtickt, müssen die Sekunden einmal eine vollkommenen Umdrehung hinter sich gebracht haben
-# time.sleep(Float) Funktion hier nützlich
+# time.sleep(Float) Funktion hier nützlich, mit import time (oben im Skript) importieren
+# Formatierung beim Output: f"{zahl:02}" für 3 -> 03, 13 -> 13
+import time
+for min in range(0, 60):
+	for sec in range(0, 60):
+		print(f"{min:02}:{sec:02}")
+		time.sleep(11)
 
 # Übung 2:
 # Erstelle eine Schleife die das kleine Einmaleins von 1 bis 10 berechnet, und jeden einzelnen
@@ -105,3 +133,6 @@ for z in range(0, 10):
 # "5 x 5 = 25"
 # ...
 # "10 x 10 = 100"
+for i in range(1, 11):
+	for j in range(1, 11):
+		print(f"{i}x{j}={i*j}")
