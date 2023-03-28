@@ -51,7 +51,7 @@ p2 = Person("", 111)
 Person.x = 1000  # Variable wird bei beiden Person Objekten geändert
 
 del person.wohnort
-print(person.wohnort)
+# print(person.wohnort)
 
 # Fahrzeug-Klasse
 # 1. Erstelle eine Fahrzeug-Klasse
